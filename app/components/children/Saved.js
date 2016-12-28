@@ -52,7 +52,7 @@ render() {
           <br/>
             <div className="panel panel-primary">
               <div className="panel-heading text-center">
-                <h3 className="panel-title"><strong><i className="fa fa-table"></i>Saved Articles</strong></h3>
+                <strong><i className="fa fa-table"></i>Saved Articles</strong>
               </div>
 
               <div className="panel-body" id="wellSection">
@@ -62,8 +62,7 @@ render() {
                     <div className="well" key={index}>
                       <a href={article.url} target="_blank"> {article.title} </a>
                       <h6> Date published: {article.pub_date} </h6>
-                      <button 
-                        className="btn btn-danger" type="submit" id={article._id}
+                      <button className="remove btn btn-danger" id={article._id}
                         onClick = {self.handleChange }>Remove</button>
                     </div>
                   );

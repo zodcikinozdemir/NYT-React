@@ -20124,14 +20124,10 @@
 								"div",
 								{ className: "panel-heading" },
 								_react2.default.createElement(
-									"h3",
-									{ className: "panel-title" },
-									_react2.default.createElement(
-										"strong",
-										null,
-										_react2.default.createElement("i", { className: "fa  fa-list-alt" }),
-										"Search "
-									)
+									"strong",
+									null,
+									_react2.default.createElement("i", { className: "fa  fa-list-alt" }),
+									"Search "
 								)
 							),
 							_react2.default.createElement(
@@ -20180,7 +20176,7 @@
 									),
 									_react2.default.createElement(
 										"button",
-										{ type: "submit", "class": "btn btn-default", id: "runSearch" },
+										{ className: "search btn btn-default", id: "runSearch" },
 										_react2.default.createElement("i", { className: "fa fa-search" }),
 										" Search"
 									)
@@ -20264,14 +20260,10 @@
 	              "div",
 	              { className: "panel-heading text-center" },
 	              _react2.default.createElement(
-	                "h3",
-	                { className: "panel-title" },
-	                _react2.default.createElement(
-	                  "strong",
-	                  null,
-	                  _react2.default.createElement("i", { className: "fa fa-table" }),
-	                  "Articles"
-	                )
+	                "strong",
+	                null,
+	                _react2.default.createElement("i", { className: "fa fa-table" }),
+	                "Articles"
 	              )
 	            ),
 	            _react2.default.createElement(
@@ -20298,7 +20290,7 @@
 	                  _react2.default.createElement(
 	                    "button",
 	                    {
-	                      className: "btn btn-primary", type: "submit", value: index,
+	                      className: "save btn btn-primary", value: index,
 	                      onClick: self.handleChange },
 	                    "Save"
 	                  )
@@ -21689,14 +21681,10 @@
 	              "div",
 	              { className: "panel-heading text-center" },
 	              _react2.default.createElement(
-	                "h3",
-	                { className: "panel-title" },
-	                _react2.default.createElement(
-	                  "strong",
-	                  null,
-	                  _react2.default.createElement("i", { className: "fa fa-table" }),
-	                  "Saved Articles"
-	                )
+	                "strong",
+	                null,
+	                _react2.default.createElement("i", { className: "fa fa-table" }),
+	                "Saved Articles"
 	              )
 	            ),
 	            _react2.default.createElement(
@@ -21723,7 +21711,7 @@
 	                  _react2.default.createElement(
 	                    "button",
 	                    {
-	                      className: "btn btn-danger", type: "submit", id: article._id,
+	                      className: "remove btn btn-danger", id: article._id,
 	                      onClick: self.handleChange },
 	                    "Remove"
 	                  )

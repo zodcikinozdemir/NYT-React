@@ -22,7 +22,7 @@ render() {
           <br/>
             <div className="panel panel-primary">
               <div className="panel-heading text-center">
-                <h3 className="panel-title"><strong><i className="fa fa-table"></i>Articles</strong></h3>
+                <strong><i className="fa fa-table"></i>Articles</strong>
               </div>
 
               <div className="panel-body" id="wellSection">
@@ -31,8 +31,7 @@ render() {
                     <div className="well" key={index}>
                       <a href={article.web_url}> {article.headline.main} </a>
                       <h6> Date published: {article.pub_date} </h6>
-                      <button 
-                        className="btn btn-primary" type="submit" value={index}
+                      <button className="save btn btn-primary" value={index}
                         onClick = { self.handleChange }>Save</button>
                     </div>
                   );

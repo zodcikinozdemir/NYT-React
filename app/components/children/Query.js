@@ -43,7 +43,7 @@ render() {
 		<div className="col-sm-12">
 			<div className="panel panel-primary">
 				<div className="panel-heading">
-					<h3 className="panel-title"><strong><i className="fa  fa-list-alt"></i>Search </strong></h3>
+					<strong><i className="fa  fa-list-alt"></i>Search </strong>
 				</div>
 				<div className="panel-body">
 					<form onClick={this.handleSubmit}>
@@ -72,7 +72,7 @@ render() {
 						required/>
 					  </div>
 
-					  <button type="submit" class="btn btn-default" id="runSearch"><i className="fa fa-search"></i> Search</button>
+					  <button className="search btn btn-default" id="runSearch"><i className="fa fa-search"></i> Search</button>
                       
 					</form>
 				</div>
