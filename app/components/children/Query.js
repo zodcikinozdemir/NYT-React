@@ -39,9 +39,8 @@ class Query extends React.Component {
 
 render() {
 	    return (	    	
-  			<div className="row">
+  		<div className="row">
 		<div className="col-sm-12">
-		<br/>
 			<div className="panel panel-primary">
 				<div className="panel-heading">
 					<h3 className="panel-title"><strong><i className="fa  fa-list-alt"></i>Search </strong></h3>

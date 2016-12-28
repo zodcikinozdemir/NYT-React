@@ -20117,7 +20117,6 @@
 					_react2.default.createElement(
 						"div",
 						{ className: "col-sm-12" },
-						_react2.default.createElement("br", null),
 						_react2.default.createElement(
 							"div",
 							{ className: "panel panel-primary" },
