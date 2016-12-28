@@ -19896,9 +19896,9 @@
 			value: function render() {
 				return _react2.default.createElement(
 					"div",
-					{ className: "jumbotron" },
+					{ "class": "page-header" },
 					_react2.default.createElement(
-						"h2",
+						"h3",
 						{ className: "text-center" },
 						_react2.default.createElement(
 							"strong",
@@ -19908,7 +19908,7 @@
 						)
 					),
 					_react2.default.createElement(
-						"h3",
+						"h4",
 						{ className: "text-center" },
 						"Search for and save articles of interest."
 					)
@@ -20144,7 +20144,7 @@
 											null,
 											"Search Term:"
 										),
-										_react2.default.createElement("input", { type: "text", id: "topic",
+										_react2.default.createElement("input", { type: "text", className: "form-control-sm", id: "topic",
 											value: this.state.topic, onChange: this.handleChange,
 											required: true })
 									),
@@ -20156,7 +20156,7 @@
 											null,
 											"Start Year (Optional):"
 										),
-										_react2.default.createElement("input", { type: "text", id: "startDate",
+										_react2.default.createElement("input", { type: "text", className: "form-control-sm", id: "startDate",
 											value: this.state.startDate,
 											onChange: this.handleChange,
 											required: true })
@@ -20169,16 +20169,19 @@
 											null,
 											"End Year (Optional):"
 										),
-										_react2.default.createElement("input", { type: "text", id: "endDate",
+										_react2.default.createElement("input", { type: "text", className: "form-control-sm", id: "endDate",
 											value: this.state.endDate,
 											onChange: this.handleChange,
 											required: true })
 									),
 									_react2.default.createElement(
-										"button",
-										{ className: "search btn btn-default", id: "runSearch" },
-										_react2.default.createElement("i", { className: "fa fa-search" }),
-										" Search"
+										"div",
+										{ "class": "form-group" },
+										_react2.default.createElement(
+											"button",
+											{ className: "search btn btn-default" },
+											"Search"
+										)
 									)
 								)
 							)
@@ -20289,8 +20292,7 @@
 	                  ),
 	                  _react2.default.createElement(
 	                    "button",
-	                    {
-	                      className: "save btn btn-primary", value: index,
+	                    { className: "save btn btn-primary", value: index,
 	                      onClick: self.handleChange },
 	                    "Save"
 	                  )
@@ -21710,8 +21712,7 @@
 	                  ),
 	                  _react2.default.createElement(
 	                    "button",
-	                    {
-	                      className: "remove btn btn-danger", id: article._id,
+	                    { className: "remove btn btn-danger", id: article._id,
 	                      onClick: self.handleChange },
 	                    "Remove"
 	                  )

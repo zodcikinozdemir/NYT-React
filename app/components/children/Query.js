@@ -50,30 +50,31 @@ render() {
 
 					  <div className="form-group">
 					    <label>Search Term:</label>
-					    <input type="text" id="topic" 
-						value={this.state.topic} onChange={this.handleChange}
-							required />
+					    <input type="text" className="form-control-sm" id="topic" 
+						    value={this.state.topic} onChange={this.handleChange}
+							required />	
 					  </div>
 
 					  <div className="form-group">
 					    <label>Start Year (Optional):</label>
-					    <input type="text" id="startDate" 
+					    <input type="text" className="form-control-sm" id="startDate" 
 						value={this.state.startDate}
                 		onChange={this.handleChange}
-                			required />
-					  </div>
+                			required/>
+                	  </div>
 
-				  
 					  <div className="form-group">
 					    <label>End Year (Optional):</label>
-					    <input type="text" id= "endDate" 
+					    <input type="text" className="form-control-sm" id= "endDate" 
 						value={this.state.endDate} 
 						onChange={this.handleChange}
 						required/>
 					  </div>
+					  
+					  <div class="form-group">
+					  	<button className="search btn btn-default">Search</button>
+					  </div>
 
-					  <button className="search btn btn-default" id="runSearch"><i className="fa fa-search"></i> Search</button>
-                      
 					</form>
 				</div>
 			</div>

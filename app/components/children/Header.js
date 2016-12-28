@@ -6,11 +6,11 @@ export class Header extends React.Component {
 	//render the function
 	render() {
 	    return (	
-        <div className="jumbotron">
-          <h2 className="text-center"><strong><i class="fa fa-newspaper-o"></i> New York Times Article Scrubber</strong></h2>
-          <h3 className="text-center">Search for and save articles of interest.</h3>
-        </div>
-	    );
+	    	<div class="page-header">
+   		    <h3 className="text-center"><strong><i class="fa fa-newspaper-o"></i> New York Times Article Scrubber</strong></h3>
+            <h4 className="text-center">Search for and save articles of interest.</h4>
+  			</div>
+        );
 	}//render
 }//React.Component
 
