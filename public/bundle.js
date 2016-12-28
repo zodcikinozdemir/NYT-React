@@ -20250,7 +20250,7 @@
 	  }, {
 	    key: "render",
 	    value: function render() {
-	      var that = this;
+	      var self = this;
 	      return _react2.default.createElement(
 	        "div",
 	        { className: "row" },
@@ -20278,36 +20278,29 @@
 	            _react2.default.createElement(
 	              "div",
 	              { className: "panel-body", id: "wellSection" },
-	              this.props.results.map(function (search, i) {
+	              this.props.results.map(function (article, index) {
 	                return _react2.default.createElement(
 	                  "div",
-	                  { className: "well", key: i },
+	                  { className: "well", key: index },
 	                  _react2.default.createElement(
-	                    "h5",
-	                    null,
+	                    "a",
+	                    { href: article.web_url },
 	                    " ",
-	                    search.headline.main,
-	                    " "
-	                  ),
-	                  _react2.default.createElement(
-	                    "h5",
-	                    null,
-	                    " Url : ",
-	                    search.web_url,
+	                    article.headline.main,
 	                    " "
 	                  ),
 	                  _react2.default.createElement(
 	                    "h6",
 	                    null,
 	                    " Date published: ",
-	                    search.pub_date,
+	                    article.pub_date,
 	                    " "
 	                  ),
 	                  _react2.default.createElement(
 	                    "button",
 	                    {
-	                      className: "btn btn-primary", type: "submit", value: i,
-	                      onClick: that.handleChange },
+	                      className: "btn btn-primary", type: "submit", value: index,
+	                      onClick: self.handleChange },
 	                    "Save"
 	                  )
 	                );
@@ -20343,7 +20336,7 @@
 
 	var ApiKey = "5aa79c02ea5840d28aa684eed86fe61c"; // Include the axios package for performing HTTP requests (promise based alternative to request)
 
-	var queryUrlBase = "https://api.nytimes.com/svc/search/v2/articlesearch.json?api-key=" + ApiKey + "&fl=pub_date,headline,web_url&q=";
+	var queryURL = "https://api.nytimes.com/svc/search/v2/articlesearch.json?api-key=" + ApiKey + "&q=";
 
 	var helpers = {
 	  runQuery: function runQuery(topic, startYear, endYear) {
@@ -20351,7 +20344,7 @@
 	    startYear = startYear.trim();
 	    endYear = endYear.trim();
 
-	    var queryURL = queryUrlBase + topic;
+	    queryURL = queryURL + topic;
 
 	    if (parseInt(startYear)) {
 	      queryURL = queryURL + "&begin_date=" + startYear + "0101";
@@ -21672,17 +21665,17 @@
 	    key: "handleChange",
 	    value: function handleChange(event) {
 	      var idToDelete = event.target.id;
-	      var that = this;
+	      var self = this;
 	      _Helpers2.default.deleteSaved(idToDelete).then(function () {
 	        _Helpers2.default.getSaved().then(function (response) {
-	          that.setState({ saved: response.data });
+	          self.setState({ saved: response.data });
 	        });
 	      });
 	    }
 	  }, {
 	    key: "render",
 	    value: function render() {
-	      var that = this;
+	      var self = this;
 	      return _react2.default.createElement(
 	        "div",
 	        { className: "row" },
@@ -21710,36 +21703,29 @@
 	            _react2.default.createElement(
 	              "div",
 	              { className: "panel-body", id: "wellSection" },
-	              this.state.saved.map(function (search, i) {
+	              this.state.saved.map(function (article, index) {
 	                return _react2.default.createElement(
 	                  "div",
-	                  { className: "well", key: i },
+	                  { className: "well", key: index },
 	                  _react2.default.createElement(
-	                    "h5",
-	                    null,
+	                    "a",
+	                    { href: article.url, target: "_blank" },
 	                    " ",
-	                    search.title,
-	                    " "
-	                  ),
-	                  _react2.default.createElement(
-	                    "h5",
-	                    null,
-	                    " Url : ",
-	                    search.url,
+	                    article.title,
 	                    " "
 	                  ),
 	                  _react2.default.createElement(
 	                    "h6",
 	                    null,
 	                    " Date published: ",
-	                    search.pub_date,
+	                    article.pub_date,
 	                    " "
 	                  ),
 	                  _react2.default.createElement(
 	                    "button",
 	                    {
-	                      className: "btn btn-danger", type: "submit", id: search._id,
-	                      onClick: that.handleChange },
+	                      className: "btn btn-danger", type: "submit", id: article._id,
+	                      onClick: self.handleChange },
 	                    "Remove"
 	                  )
 	                );

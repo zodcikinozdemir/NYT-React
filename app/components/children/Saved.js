@@ -36,16 +36,16 @@ class Results extends React.Component {
 
   handleChange(event) {
     var idToDelete = event.target.id;
-    var that = this;
+    var self = this;
     helpers.deleteSaved(idToDelete).then(function(){
       helpers.getSaved().then(function(response) {
-        that.setState({ saved: response.data });
+        self.setState({ saved: response.data });
       });
     });
   }
 
 render() {
-  var that = this;
+  var self = this;
 	   return (
       <div className="row">
         <div className="col-sm-12">
@@ -57,15 +57,14 @@ render() {
 
               <div className="panel-body" id="wellSection">
                 {/* Here we use a map function to loop through an array in JSX */}
-                {this.state.saved.map(function(search, i){
+                {this.state.saved.map(function(article, index){
                   return(
-                    <div className="well" key={i}>
-                      <h5> {search.title} </h5>
-                      <h5> Url : {search.url} </h5>
-                      <h6> Date published: {search.pub_date} </h6>
+                    <div className="well" key={index}>
+                      <a href={article.url} target="_blank"> {article.title} </a>
+                      <h6> Date published: {article.pub_date} </h6>
                       <button 
-                        className="btn btn-danger" type="submit" id={search._id}
-                        onClick = { that.handleChange }>Remove</button>
+                        className="btn btn-danger" type="submit" id={article._id}
+                        onClick = {self.handleChange }>Remove</button>
                     </div>
                   );
                 })}

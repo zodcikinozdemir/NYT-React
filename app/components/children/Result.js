@@ -5,7 +5,7 @@ import React from "react";
 class Results extends React.Component {
 	
 	constructor(props) {
-      super(props);
+    super(props);
      this.handleChange = this.handleChange.bind(this);
   }
 
@@ -15,7 +15,7 @@ class Results extends React.Component {
   }
 
 render() {
-  var that = this;
+  var self = this;
 	   return (
       <div className="row">
         <div className="col-sm-12">
@@ -26,15 +26,14 @@ render() {
               </div>
 
               <div className="panel-body" id="wellSection">
-                {this.props.results.map(function(search, i){
+                {this.props.results.map(function(article, index){
                   return(
-                    <div className="well" key={i}>
-                      <h5> {search.headline.main} </h5>
-                      <h5> Url : {search.web_url} </h5>
-                      <h6> Date published: {search.pub_date} </h6>
+                    <div className="well" key={index}>
+                      <a href={article.web_url}> {article.headline.main} </a>
+                      <h6> Date published: {article.pub_date} </h6>
                       <button 
-                        className="btn btn-primary" type="submit" value={i}
-                        onClick = { that.handleChange }>Save</button>
+                        className="btn btn-primary" type="submit" value={index}
+                        onClick = { self.handleChange }>Save</button>
                     </div>
                   );
                 })}

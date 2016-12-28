@@ -2,8 +2,8 @@
 import axios from "axios";
 
 var ApiKey = "5aa79c02ea5840d28aa684eed86fe61c";
-var queryUrlBase = "https://api.nytimes.com/svc/search/v2/articlesearch.json?api-key=" 
-                   + ApiKey + "&fl=pub_date,headline,web_url&q=";
+var queryURL = "https://api.nytimes.com/svc/search/v2/articlesearch.json?api-key=" 
+                   + ApiKey + "&q=";
 
 
 const helpers = {
@@ -12,7 +12,7 @@ const helpers = {
     startYear=startYear.trim();
     endYear=endYear.trim();
 
-    var queryURL = queryUrlBase+topic;
+    queryURL = queryURL+topic;
 
     if (parseInt(startYear)) {
       queryURL = queryURL + "&begin_date=" + startYear + "0101";
