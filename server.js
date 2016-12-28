@@ -1,4 +1,3 @@
-// Include Server Dependencies
 var express = require("express");
 var bodyParser = require("body-parser");
 var logger = require("morgan");
@@ -35,10 +34,8 @@ db.once("open", function() {
 });
 
 var application_controller = require('./controllers/application_controllers');
-var articles_controller = require('./controllers/article_controllers');
 
 app.use('/', application_controller);
-app.use('/api/saved',articles_controller )
 
 var PORT = process.env.PORT || 3000;
 app.listen(PORT, function() {
