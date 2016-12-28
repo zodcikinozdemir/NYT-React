@@ -19896,7 +19896,7 @@
 			value: function render() {
 				return _react2.default.createElement(
 					"div",
-					{ "class": "page-header" },
+					{ className: "page-header" },
 					_react2.default.createElement(
 						"h3",
 						{ className: "text-center" },
@@ -20176,7 +20176,7 @@
 									),
 									_react2.default.createElement(
 										"div",
-										{ "class": "form-group" },
+										{ className: "form-group" },
 										_react2.default.createElement(
 											"button",
 											{ className: "search btn btn-default" },

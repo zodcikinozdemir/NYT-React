@@ -71,7 +71,7 @@ render() {
 						required/>
 					  </div>
 					  
-					  <div class="form-group">
+					  <div className="form-group">
 					  	<button className="search btn btn-default">Search</button>
 					  </div>
 

@@ -6,7 +6,7 @@ export class Header extends React.Component {
 	//render the function
 	render() {
 	    return (	
-	    	<div class="page-header">
+	    	<div className="page-header">
    		    <h3 className="text-center"><strong><i class="fa fa-newspaper-o"></i> New York Times Article Scrubber</strong></h3>
             <h4 className="text-center">Search for and save articles of interest.</h4>
   			</div>
