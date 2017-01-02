@@ -1,7 +1,7 @@
 {
   "name": "nytreact",
   "version": "1.0.0",
-  "description": "Asingle page application using React and Mongoose- api-Call to New York Times api is also made upon page request.\r ## Installation\r \t1. Clone the Repo\r \t2. NPM Install\r \t3. Make connection to the Mongoose database \r ## Usage\r \t1. RUN node server.js\r \t2. Open chrome and localhost:3000/\r \tThis is also uploaded on Heroku: \r \t    //https://---------------\r ## Technologies\r NodeJS, Express, React, Mongoose, Rest API",
+  "description": "A single page application using React and Mongoose- api-Call to New York Times api is also made upon page request.\r ## Installation\r \t1. Clone the Repo\r \t2. NPM Install\r \t3. Make connection to the Mongoose database \r ## Usage\r \t1. RUN node server.js\r \t2. Open chrome and localhost:3000/\r \tThis is also uploaded on Heroku: \r \t    //https://---------------\r ## Technologies\r NodeJS, Express, React, Mongoose, Rest API",
   "main": "server.js",
   "dependencies": {
     "axios": "^0.12.0",
@@ -26,12 +26,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Senthilselva/nyctreact.git"
+    "url": "git+https://github.com/zodcikinozdemir/NYT-React"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Senthilselva/nyctreact/issues"
+    "url": "https://github.com/zodcikinozdemir/NYT-React/issues"
   },
-  "homepage": "https://github.com/Senthilselva/nyctreact#readme"
+  "homepage": "https://github.com/zodcikinozdemir/NYT-React#readme"
 }
